@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Task from './Task.js';
 
-class MenuSection extends Component {
+class Task extends Component {
   constructor(props){
     super(props);
     this.state={
@@ -22,27 +21,26 @@ class MenuSection extends Component {
 
   render(){
     const isExpanded = this.state.expanded;
-    let itemList;
+    let subSect;
 
     if (isExpanded) {
-      itemList =
-      <div>
-        {this.props.items.map( (item, index) =>
-          <Task text={item.text} subSect={item.subSect} />
-        )}
-      </div>
+      subSect =
+        <div>{this.props.subSect}</div>
     } else {
-      itemList = null;
+      if (!isExpanded) {
+        subSect = null;
+      }
     }
 
     return(
-      <div className="MenuSection">
-        <h2>{this.props.title}</h2>
-        <button onClick={() => this.toggleExpand()}>Expand</button>
-        {itemList}
+      <div>
+        <input type="checkbox" id={this.props.text}></input>
+        <label for={this.props.text}>{this.props.text}</label>
+        <button onClick={() => this.toggleExpand()}>Show Sub-section</button>
+        {subSect}
       </div>
     )
   }
 }
 
-export default MenuSection;
+export default Task;

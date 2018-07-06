@@ -23,7 +23,11 @@ class Routine extends Component {
   render(){
     const choresItems=[{
       text: "Listen to your album of the day",
-      subSect: null
+      subSect:
+        <ul>
+          <li>EVERYTHING IS LOVE by The Carters</li>
+          <li>Brighter Future by Big Gigantic</li>
+        </ul>
     }, {
       text: "Pick up trash in your room",
       subSect: null
