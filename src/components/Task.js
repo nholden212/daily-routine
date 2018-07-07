@@ -22,13 +22,21 @@ class Task extends Component {
   render(){
     const isExpanded = this.state.expanded;
     let subSect;
+    let button;
 
     if (isExpanded) {
-      subSect =
-        <div>{this.props.subSect}</div>
+      subSect = <div>{this.props.subSect}</div>
     } else {
       if (!isExpanded) {
         subSect = null;
+      }
+    }
+
+    if (this.props.subSect !== null){
+      button = <button onClick={() => this.toggleExpand()}>Show Sub-section</button>
+    } else {
+      if (this.props.subSect === null){
+        button = null;
       }
     }
 
@@ -36,7 +44,7 @@ class Task extends Component {
       <div>
         <input type="checkbox" id={this.props.text}></input>
         <label for={this.props.text}>{this.props.text}</label>
-        <button onClick={() => this.toggleExpand()}>Show Sub-section</button>
+        {button}
         {subSect}
       </div>
     )

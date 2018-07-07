@@ -23,16 +23,57 @@ class Routine extends Component {
   render(){
     const choresItems=[{
       text: "Listen to your album of the day",
-      subSect:
-        <ul>
-          <li>EVERYTHING IS LOVE by The Carters</li>
-          <li>Brighter Future by Big Gigantic</li>
-        </ul>
+      subSect: null
     }, {
       text: "Pick up trash in your room",
       subSect: null
     }, {
       text: "Pick up your dirty clothes",
+      subSect: null
+    }, {
+      text: "Bring all dirty dishes from your room into the kitchen",
+      subSect: null
+    }, {
+      text: "Otherwise tidy up your room",
+      subSect: null
+    }, {
+      text: "Make your bed",
+      subSect: null
+    }, {
+      text: "Start any laundry you need to do",
+      subSect: null
+    }, {
+      text: "Start preparing two eggs for breakfast",
+      subSect: null
+    }, {
+      text: "Empty the dishwasher",
+      subSect: null
+    }, {
+      text: "Reload the dishwasher",
+      subSect: null
+    }, {
+      text: "Tidy up the family room",
+      subSect: null
+    }, {
+      text: "Eat breakfast",
+      subSect: null
+    }, {
+      text: "Review and update your budget",
+      subSect: null
+    }, {
+      text: "Review and update your To-Do List",
+      subSect: null
+    }, {
+      text: "Put away any clean dishes",
+      subSect: null
+    }, {
+      text: "Wash the rest of the dirty dishes",
+      subSect: null
+    }, {
+      text: "Wipe down the kitchen counters where necessary",
+      subSect: null
+    }, {
+      text: "Take out the trash and recycling",
       subSect: null
     }];
 
@@ -40,25 +81,90 @@ class Routine extends Component {
       text: "Stretch",
       subSect: null
     }, {
+      text: "Grab a banana to eat in the car",
+      subSect: null
+    }, {
       text: "Complete your workout of the day",
+      subSect: null
+    }, {
+      text: "Read today's New York Times Morning Briefing",
+      subSect: null
+    }, {
+      text: "Read about today's album of the day",
+      subSect: null
+    }, {
+      text: "Read about your News and Politics topic of the day",
+      subSect: null
+    }, {
+      text: "Swing by the grocery store to get anything you need for lunch/dinner",
       subSect: null
     }];
 
     const hygieneItems=[{
+      text: "Make and drink a protein shake",
+      subSect: null
+    }, {
       text: "Shower",
       subSect: null
     }, {
       text: "Dry off",
       subSect: null
+    }, {
+      text: "Comb your hair",
+      subSect: null
+    }, {
+      text: "Shave/groom",
+      subSect: null
+    }, {
+      text: "Use acne cream",
+      subSect: null
+    }, {
+      text: "Use Preparation H",
+      subSect: null
+    }, {
+      text: "Brush your teeth",
+      subSect: null
+    }, {
+      text: "Floss",
+      subSect: null
+    }, {
+      text: "Massage your gums with your rubber tip",
+      subSect: null
+    }, {
+      text: "Put on lotion",
+      subSect: null
+    }, {
+      text: "Use deodorant",
+      subSect: null
+    }, {
+      text: "Use hair gel",
+      subSect: null
+    }, {
+      text: "Clip your nails",
+      subSect: null
+    }, {
+      text: "Weigh yourself",
+      subSect: null
+    }, {
+      text: "Get dressed",
+      subSect: null
+    }, {
+      text: "Eat an apple",
+      subSect: null
     }];
 
     const lunchItems=[{
-      text: "Eat lunch",
+      text: "Eat some salad for lunch",
       subSect: null
     }, {
       text: "Read while you eat",
       subSect: null
     }];
+
+    const studyItems=[{
+      text: "Complete your checkpoints for the day",
+      subsect: null
+    }]
 
     const finishItems=[{
       text: "Eat a serving of veggies",
@@ -78,6 +184,7 @@ class Routine extends Component {
             <MenuSection title="Workout" items={workoutItems}/>
             <MenuSection title="Hygiene" items={hygieneItems}/>
             <MenuSection title="Lunch" items={lunchItems}/>
+            <MenuSection title="Study" items={studyItems}/>
             <MenuSection title="Finish Up" items={finishItems}/>
           </main>
       </div>
