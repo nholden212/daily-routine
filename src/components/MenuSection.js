@@ -42,7 +42,7 @@ class MenuSection extends Component {
 
     return(
       <div className="MenuSection">
-        <h2>{this.props.title}</h2>
+        <h2 className="inline">{this.props.title}</h2>
         <button onClick={() => this.toggleExpand()}>Expand</button>
         {itemList}
       </div>

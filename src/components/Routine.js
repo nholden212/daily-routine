@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MenuSection from './MenuSection.js';
+import List from './subComponents/List.js';
 
 class Routine extends Component {
   constructor(props){
@@ -24,15 +25,7 @@ class Routine extends Component {
     const choresItems=[{
       text: "Listen to your album of the day",
       subSect:
-        <div>
-          You need to create a list of albums. You should be able to:
-          <ul>
-            <li>Add albums</li>
-            <li>Remove albums</li>
-            <li>Reorder albums</li>
-            <li>Cross albums off</li>
-          </ul>
-        </div>
+        <List firebase={this.props.firebase} listData='Album-of-the-day' />
     }, {
       text: "Pick up trash in your room",
       subSect: null
@@ -79,7 +72,7 @@ class Routine extends Component {
           </ul>
         </div>
     }, {
-      text: "Review and update your To-Do List",
+      text: "Review and update your to-do list",
       subSect: "Create a basic to-do list"
     }, {
       text: "Put away any clean dishes",
