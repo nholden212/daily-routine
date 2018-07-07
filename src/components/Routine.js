@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MenuSection from './MenuSection.js';
-import List from './subComponents/List.js';
+import AlbumOfTheDay from './subComponents/AlbumOfTheDay.js';
 
 class Routine extends Component {
   constructor(props){
@@ -25,7 +25,7 @@ class Routine extends Component {
     const choresItems=[{
       text: "Listen to your album of the day",
       subSect:
-        <List firebase={this.props.firebase} listData='Album-of-the-day' />
+        <AlbumOfTheDay firebase={this.props.firebase} listData='Album-of-the-day' />
     }, {
       text: "Pick up trash in your room",
       subSect: null

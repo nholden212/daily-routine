@@ -7,7 +7,7 @@ class List extends Component {
     this.state = {
       items: []
     }
-    this.itemsRef = this.props.firebase.database().ref("Lists/Album-of-the-day");
+    this.itemsRef = this.props.firebase.database().ref(this.props.listData);
   }
 
   componentDidMount() {
