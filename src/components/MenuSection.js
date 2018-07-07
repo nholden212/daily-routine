@@ -32,7 +32,12 @@ class MenuSection extends Component {
         )}
       </div>
     } else {
-      itemList = null;
+      itemList =
+      <div className="hidden">
+        {this.props.items.map( (item, index) =>
+          <Task text={item.text} subSect={item.subSect} />
+        )}
+      </div>
     }
 
     return(

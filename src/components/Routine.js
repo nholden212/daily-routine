@@ -23,7 +23,16 @@ class Routine extends Component {
   render(){
     const choresItems=[{
       text: "Listen to your album of the day",
-      subSect: null
+      subSect:
+        <div>
+          You need to create a list of albums. You should be able to:
+          <ul>
+            <li>Add albums</li>
+            <li>Remove albums</li>
+            <li>Reorder albums</li>
+            <li>Cross albums off</li>
+          </ul>
+        </div>
     }, {
       text: "Pick up trash in your room",
       subSect: null
@@ -59,10 +68,19 @@ class Routine extends Component {
       subSect: null
     }, {
       text: "Review and update your budget",
-      subSect: null
+      subSect:
+        <div>
+          You should be able to:
+          <ul>
+            <li>View your current account balances</li>
+            <li>View your current budgets</li>
+            <li>Enter a new transaction</li>
+            <li>Adjust your budgets</li>
+          </ul>
+        </div>
     }, {
       text: "Review and update your To-Do List",
-      subSect: null
+      subSect: "Create a basic to-do list"
     }, {
       text: "Put away any clean dishes",
       subSect: null
@@ -79,22 +97,22 @@ class Routine extends Component {
 
     const workoutItems=[{
       text: "Stretch",
-      subSect: null
+      subSect: "Should show your stretching routine"
     }, {
       text: "Grab a banana to eat in the car",
       subSect: null
     }, {
       text: "Complete your workout of the day",
-      subSect: null
+      subSect: "Should show your workout of the day, depending on the day of the week"
     }, {
       text: "Read today's New York Times Morning Briefing",
-      subSect: null
+      subSect: "Should link to today's morning briefing"
     }, {
       text: "Read about today's album of the day",
-      subSect: null
+      subSect: "Should do a search on Google, Wikipedia, and/or Pitchfork for the first item on the album of the day list"
     }, {
       text: "Read about your News and Politics topic of the day",
-      subSect: null
+      subSect: "Should do a search on Google and/or Wikipedia for the first item on your News and Politics list (store in the program but don't render anywhere)"
     }, {
       text: "Swing by the grocery store to get anything you need for lunch/dinner",
       subSect: null
@@ -144,7 +162,14 @@ class Routine extends Component {
       subSect: null
     }, {
       text: "Weigh yourself",
-      subSect: null
+      subSect:
+        <div>
+          You should be able to:
+          <ul>
+            <li>View a table of your weight day-by-day</li>
+            <li>Enter your weight for the current day</li>
+          </ul>
+        </div>
     }, {
       text: "Get dressed",
       subSect: null

@@ -4,7 +4,8 @@ class Task extends Component {
   constructor(props){
     super(props);
     this.state={
-      expanded: false
+      expanded: false,
+      checked: false
     }
   }
 
@@ -19,6 +20,17 @@ class Task extends Component {
     }
   }
 
+  toggleChecked(){
+    const isChecked = this.state.checked;
+    if(isChecked){
+      this.setState({checked: false});
+    } else {
+      if(!isChecked){
+        this.setState({checked: true});
+      }
+    }
+  }
+
   render(){
     const isExpanded = this.state.expanded;
     let subSect;
@@ -28,7 +40,7 @@ class Task extends Component {
       subSect = <div>{this.props.subSect}</div>
     } else {
       if (!isExpanded) {
-        subSect = null;
+        subSect = <div className="hidden">{this.props.subSect}</div>
       }
     }
 
@@ -42,7 +54,7 @@ class Task extends Component {
 
     return(
       <div>
-        <input type="checkbox" id={this.props.text}></input>
+        <input type="checkbox" id={this.props.text} checked={this.state.checked} onClick={() => this.toggleChecked()}></input>
         <label for={this.props.text}>{this.props.text}</label>
         {button}
         {subSect}
